@@ -219,43 +219,48 @@ export function Hero() {
           </div>
         </div>
 
-        <div>
-          <span className="hero-eyebrow">
-            <span className="bar" />
-            <span>§ 00 — Identity</span>
-            <span style={{ color: 'var(--dim)' }}>· 14.123°N · 121.067°E</span>
-          </span>
-          <h1 className="hero-name" aria-label="JP Tayco">
-            <SplitChars text="JP" delay={120} step={28} />
-            <br />
-            <SplitChars text="*Tayco.*" delay={300} step={28} />
-          </h1>
-          <div
-            style={{
-              marginTop: 32,
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 12,
-            }}
-          >
-            <TypingRoles />
+        <div className="hero-content">
+          <div>
+            <span className="hero-eyebrow">
+              <span className="bar" />
+              <span>§ 00 — Identity</span>
+              <span style={{ color: 'var(--dim)' }}>· 14.123°N · 121.067°E</span>
+            </span>
+            <h1 className="hero-name" aria-label="JP Tayco">
+              <SplitChars text="JP" delay={120} step={28} />
+              <br />
+              <SplitChars text="*Tayco.*" delay={300} step={28} />
+            </h1>
             <div
               style={{
-                fontFamily: 'var(--font-mono)',
-                color: 'var(--muted)',
-                fontSize: 14,
-                maxWidth: 60 + 'ch',
-                lineHeight: 1.6,
+                marginTop: 32,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
               }}
             >
-              <span style={{ color: 'var(--amber)' }}>{'>'}</span> Building
-              AI-powered systems and shipping real-world products — from
-              concept to production. Currently founding{' '}
-              <span style={{ color: 'var(--text)' }}>
-                Appnado IT Solutions
-              </span>
-              .
+              <TypingRoles />
+              <div
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  color: 'var(--muted)',
+                  fontSize: 14,
+                  maxWidth: 60 + 'ch',
+                  lineHeight: 1.6,
+                }}
+              >
+                <span style={{ color: 'var(--amber)' }}>{'>'}</span> Building
+                AI-powered systems and shipping real-world products — from
+                concept to production. Currently founding{' '}
+                <span style={{ color: 'var(--text)' }}>
+                  Appnado IT Solutions
+                </span>
+                .
+              </div>
             </div>
+          </div>
+          <div className="hero-image">
+            <img src="/toga.jpg" alt="JP Tayco" />
           </div>
         </div>
 

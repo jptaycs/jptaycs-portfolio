@@ -23,6 +23,7 @@ type Project = {
   blurb: string;
   stack: string[];
   viz: 'records' | 'chat' | 'graph';
+  url?: string;
 };
 
 const PROJECTS: Project[] = [
@@ -47,6 +48,7 @@ const PROJECTS: Project[] = [
       'Interactive portfolio engine with live AI chat, embedded terminal, and scroll-driven motion. Visitors can literally ask the site questions about the person it represents.',
     stack: ['Next.js', 'Framer Motion', 'Claude API', 'Edge'],
     viz: 'chat',
+    url: 'https://itaintyourguy.com/',
   },
   {
     id: 'p-3',
@@ -100,7 +102,7 @@ function WorkCard({ p }: { p: Project }) {
     };
   }, []);
 
-  return (
+  const content = (
     <article id={p.id} ref={ref} className="work-card" data-cursor="VIEW">
       <div>
         <div className="w-meta">
@@ -123,106 +125,41 @@ function WorkCard({ p }: { p: Project }) {
       </div>
     </article>
   );
+
+  if (p.url) {
+    return (
+      <a href={p.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+        {content}
+      </a>
+    );
+  }
+
+  return content;
 }
 
 function ProjectViz({ kind }: { kind: Project['viz'] }) {
   if (kind === 'records') {
     return (
-      <Fragment>
-        <div className="viz-grid" />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 24,
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: 8,
-            fontFamily: 'var(--font-mono)',
-            fontSize: 10,
-          }}
-        >
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div
-              key={i}
-              style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid var(--line)',
-                borderRadius: 6,
-                padding: 8,
-                display: 'flex',
-                justifyContent: 'space-between',
-                color: 'var(--muted)',
-              }}
-            >
-              <span>RES-{String(2487 + i).padStart(4, '0')}</span>
-              <span
-                style={{
-                  color: i % 2 === 0 ? '#22c55e' : 'var(--amber)',
-                }}
-              >
-                ● {i % 2 === 0 ? 'CERT' : 'PEND'}
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className="viz-label">RECORDS · PDF GEN · OFFLINE</div>
-      </Fragment>
+      <div style={{ position: 'absolute', inset: 0, borderRadius: 'inherit', overflow: 'hidden' }}>
+        <iframe
+          src="https://www.youtube.com/embed/UkUzTKExxM8"
+          title="Barangay Management System Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ width: '100%', height: '100%', border: 0 }}
+        />
+      </div>
     );
   }
   if (kind === 'chat') {
     return (
-      <Fragment>
-        <div className="viz-blob" />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 20,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-            gap: 8,
-          }}
-        >
-          <div
-            style={{
-              alignSelf: 'flex-end',
-              background: 'var(--grad)',
-              color: '#fff',
-              padding: '8px 12px',
-              borderRadius: '12px 12px 4px 12px',
-              fontFamily: 'var(--font-mono)',
-              fontSize: 11,
-              maxWidth: '80%',
-            }}
-          >
-            who built this site?
-          </div>
-          <div
-            style={{
-              background: 'var(--surface-3)',
-              color: 'var(--text)',
-              padding: '8px 12px',
-              borderRadius: '12px 12px 12px 4px',
-              fontFamily: 'var(--font-mono)',
-              fontSize: 11,
-              maxWidth: '90%',
-            }}
-          >
-            i did — and i&apos;m streaming this reply through Claude...
-            <span
-              style={{
-                display: 'inline-block',
-                width: 6,
-                height: 12,
-                background: 'var(--cyan)',
-                verticalAlign: 'middle',
-                marginLeft: 4,
-              }}
-            />
-          </div>
-        </div>
-        <div className="viz-label">LLM · STREAMING · EDGE</div>
-      </Fragment>
+      <div style={{ position: 'absolute', inset: 0, borderRadius: 'inherit', overflow: 'hidden' }}>
+        <img
+          src="/guy.png"
+          alt="AI Portfolio Platform"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
     );
   }
   return (

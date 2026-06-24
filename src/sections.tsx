@@ -123,9 +123,7 @@ export function About() {
       <div className="about-grid">
         <div className="about-bio">
           <div className="portrait">
-            <span className="face-mono">
-              [ HEAD_SHOT · 4 / 5 ] — drop image here
-            </span>
+            <img src="/creative.jpg" alt="JP Tayco" />
           </div>
           <p>
             Computer Science graduate from{' '}

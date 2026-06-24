@@ -180,7 +180,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .hero {
   position: relative;
   min-height: 100vh;
-  padding: 140px 36px 80px;
+  padding: 100px 36px 80px;
   overflow: hidden;
   isolation: isolate;
 }
@@ -253,6 +253,30 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 @keyframes charIn { to { transform: translateY(0); opacity: 1; } }
 
+.hero .hero-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+}
+.hero .hero-image {
+  width: clamp(260px, 28vw, 400px);
+  aspect-ratio: 3/4;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  position: relative;
+  align-self: start;
+  margin-top: -20px;
+  margin-right: 40px;
+}
+.hero .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .hero .sub {
   display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
   font-family: var(--font-mono);
@@ -313,6 +337,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 @media (max-width: 900px) {
   .hero { padding: 110px 20px 60px; }
   .hero .meta-row { flex-wrap: wrap; }
+  .hero .hero-content { grid-template-columns: 1fr; }
+  .hero .hero-image { width: clamp(160px, 50vw, 260px); }
   .hero .hero-bottom { grid-template-columns: 1fr 1fr; }
 }
 
@@ -477,36 +503,22 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   font-size: 11px;
 }
 
-/* portrait placeholder */
+/* portrait */
 .portrait {
   width: 100%;
   aspect-ratio: 4/5;
-  background:
-    linear-gradient(135deg, rgba(124,58,237,0.25), rgba(6,182,212,0.18)),
-    repeating-linear-gradient(45deg, var(--surface) 0 14px, var(--surface-2) 14px 28px);
   border: 1px solid var(--line);
   border-radius: 16px;
   position: relative;
   overflow: hidden;
   margin-bottom: 24px;
-  display: flex;
-  align-items: flex-end;
-  padding: 18px;
 }
-.portrait::before {
-  content: "PORTRAIT / 4:5";
-  position: absolute; top: 18px; left: 18px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: var(--muted);
-  text-transform: uppercase;
-}
-.portrait .face-mono {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 0.1em;
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
 }
 
 /* ============== TECH BENTO ============== */
