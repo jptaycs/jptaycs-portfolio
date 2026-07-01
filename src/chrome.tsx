@@ -97,6 +97,9 @@ export function Header({ onOpenCmdk, theme, onToggleTheme }: HeaderProps) {
         <a href="#stack">STACK</a>
         <a href="#timeline">PATH</a>
         <a href="#contact">CONTACT</a>
+        <a href="/Updated-CV-Tayco.pdf" download="Updated-CV-Tayco.pdf" data-cursor="DOWNLOAD">
+          CV ↓
+        </a>
         <button className="kbd-cta" onClick={onOpenCmdk} data-cursor="OPEN">
           <span className="kbd">⌘</span>
           <span className="kbd">K</span>
@@ -207,10 +210,10 @@ const CMDK_ITEMS: CmdkItem[] = [
   },
   {
     group: 'Quick Actions',
-    label: 'Copy email — jptayco1109@gmail.com',
+    label: 'Copy email — jptayco2002@gmail.com',
     kbd: '⌘C',
     action: () => {
-      navigator.clipboard?.writeText('jptayco1109@gmail.com');
+      navigator.clipboard?.writeText('jptayco2002@gmail.com');
     },
   },
   {
@@ -218,7 +221,10 @@ const CMDK_ITEMS: CmdkItem[] = [
     label: 'Download Resume (PDF)',
     kbd: '⌘D',
     action: () => {
-      alert('Resume download — wire up to PDF asset.');
+      const link = document.createElement('a');
+      link.href = '/Updated-CV-Tayco.pdf';
+      link.download = 'Updated-CV-Tayco.pdf';
+      link.click();
     },
   },
   {
@@ -464,7 +470,7 @@ export function AskPortfolio() {
         const next = m.slice();
         next[next.length - 1] = {
           role: 'bot',
-          text: "Hmm, I couldn't reach the model. Try again in a sec, or email me at jptayco1109@gmail.com.",
+          text: "Hmm, I couldn't reach the model. Try again in a sec, or email me at jptayco2002@gmail.com.",
           streaming: false,
         };
         return next;

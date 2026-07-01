@@ -20,7 +20,7 @@ Selected work:
 - AI Portfolio Platform (2024, Next.js/Framer Motion/Claude API) — interactive portfolio with live AI chat and terminal interface.
 - Trading Automation System (2024, C#/.NET) — real-time automated trading bot with predictive strategy.
 
-Contact: jptayco1109@gmail.com · github.com/jptaycs · linkedin.com/in/jerome-patrick-r-tayco-442873264
+Contact: jptayco2002@gmail.com · github.com/jptaycs · linkedin.com/in/jerome-patrick-r-tayco-442873264
 
 Keep replies short (2-4 sentences), conversational, and confident. No markdown bullets.`;
 
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
   if (!apiKey) {
     return NextResponse.json({
       reply:
-        "I'm JP's portfolio assistant — the Anthropic API key isn't wired up in this environment yet. In the meantime, ping JP directly at jptayco1109@gmail.com and he'll get back to you within a few hours.",
+        "I'm JP's portfolio assistant — the Anthropic API key isn't wired up in this environment yet. In the meantime, ping JP directly at jptayco2002@gmail.com and he'll get back to you within a few hours.",
     });
   }
 
@@ -78,7 +78,7 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         reply:
-          "Hmm, I couldn't reach the model. Try again in a sec, or email me at jptayco1109@gmail.com.",
+          "Hmm, I couldn't reach the model. Try again in a sec, or email me at jptayco2002@gmail.com.",
       },
       { status: 200 }
     );

@@ -997,7 +997,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   display: inline-block;
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(40px, 8vw, 140px);
+  font-size: clamp(40px, 7vw, 140px);
   letter-spacing: -0.04em;
   line-height: 0.95;
   text-decoration: none;

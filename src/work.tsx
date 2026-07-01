@@ -480,7 +480,7 @@ export function GitHubSection() {
 
 export function Contact() {
   const [hover, setHover] = useState(false);
-  const email = 'jptayco1109@gmail.com';
+  const email = 'jptayco2002@gmail.com';
   const [copied, setCopied] = useState(false);
   const copy = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -557,6 +557,21 @@ export function Contact() {
               {copied ? '✓ COPIED' : 'COPY EMAIL'}
             </button>
             <a
+              href="/Updated-CV-Tayco.pdf"
+              download="Updated-CV-Tayco.pdf"
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: 12,
+                color: 'var(--muted)',
+                textDecoration: 'none',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+              }}
+              data-cursor="DOWNLOAD"
+            >
+              DOWNLOAD CV ↓
+            </a>
+            <a
               href="https://github.com/jptaycs"
               target="_blank"
               rel="noreferrer"
@@ -597,7 +612,7 @@ export function Contact() {
           </div>
           <div className="col">
             <span className="head">SOCIAL</span>
-            <a href="mailto:jptayco1109@gmail.com">jptayco1109@gmail.com</a>
+            <a href="mailto:jptayco2002@gmail.com">jptayco2002@gmail.com</a>
             <a href="https://github.com/jptaycs" target="_blank" rel="noreferrer">
               github.com/jptaycs
             </a>
