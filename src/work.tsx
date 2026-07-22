@@ -62,6 +62,93 @@ const PROJECTS: Project[] = [
     stack: ['C#', '.NET', 'REST APIs', 'WebSockets'],
     viz: 'graph',
   },
+  {
+    id: 'p-4',
+    num: '04',
+    year: '2025',
+    kind: 'WEB · GOVTECH/SME SAAS',
+    title: 'Appnado — IT Solutions Platform',
+    blurb:
+      'Company platform for Appnado IT Solutions, digitizing barangay records, warehouse inventory, and retail POS for Philippine LGUs and SMEs — role-based access, offline support, and audit-ready reporting.',
+    stack: ['Next.js', 'React', 'REST APIs', 'Multi-tenant'],
+    viz: 'shot',
+    image: '/projects/appnado.png',
+    url: 'https://appnado.netlify.app/',
+  },
+  {
+    id: 'p-5',
+    num: '05',
+    year: '2025',
+    kind: 'WEB · PORTFOLIO',
+    title: 'Nurse Portfolio — Catherine Tayco',
+    blurb:
+      'A clean, credibility-first portfolio site for a registered nurse — credentials, experience, and contact details in one shareable page.',
+    stack: ['Next.js', 'React', 'Responsive'],
+    viz: 'site',
+    url: 'https://catherinetayco.netlify.app/',
+  },
+  {
+    id: 'p-6',
+    num: '06',
+    year: '2025',
+    kind: 'WEB · FITNESS/LOCAL BIZ',
+    title: 'LIFT. Naga',
+    blurb:
+      'Marketing site for a multi-discipline fitness facility in Naga City — nine training disciplines, ten coaches, membership tiers, and a meal-prep program, all in one bookable page.',
+    stack: ['Next.js', 'React', 'Responsive'],
+    viz: 'site',
+    url: 'https://liftgymnaga.netlify.app/',
+  },
+  {
+    id: 'p-7',
+    num: '07',
+    year: '2025',
+    kind: 'WEB · PORTFOLIO/BOOKING',
+    title: 'Isse Capucao — Model & Creator Portfolio',
+    blurb:
+      'Portfolio and booking platform for a freelance model and content creator — galleries, measurements, SMM service offerings, and direct booking channels.',
+    stack: ['Next.js', 'React', 'Responsive'],
+    viz: 'shot',
+    image: '/projects/jellouisse.png',
+    url: 'https://jellouisse.netlify.app/',
+  },
+  {
+    id: 'p-8',
+    num: '08',
+    year: '2025',
+    kind: 'WEB · HEALTHCARE',
+    title: 'Torres General & Laparoscopic Surgery',
+    blurb:
+      'Medical practice site for a laparoscopic surgeon in Naga City — services, credentials, hospital partnerships, and online appointment booking via UCMS.',
+    stack: ['Next.js', 'React', 'Booking integration'],
+    viz: 'site',
+    url: 'https://torreslaparoscopy.netlify.app/',
+  },
+  {
+    id: 'p-9',
+    num: '09',
+    year: '2025',
+    kind: 'WEB · MARKETPLACE',
+    title: 'Rentivo — Peer-to-Peer Gear Rental',
+    blurb:
+      'Marketplace for renting cameras, phones, and lenses from local owners — location-based search, creator bundles, host dashboard, and instant booking.',
+    stack: ['Next.js', 'React', 'Marketplace/Booking'],
+    viz: 'shot',
+    image: '/projects/rentivo.png',
+    url: 'https://rentivo.netlify.app/',
+  },
+  {
+    id: 'p-10',
+    num: '10',
+    year: '2025',
+    kind: 'WEB · E-GOVERNANCE',
+    title: 'AppNindo — Municipal E-Governance Platform',
+    blurb:
+      'Citizen request portal and admin dashboard for the Municipality of Pamplona, Camarines Sur — department-level SLA tracking, barangay records sync, and real-time processing dashboards for ~52,000 residents.',
+    stack: ['Next.js', 'React', 'Admin dashboard', 'REST APIs'],
+    viz: 'site',
+    url: 'https://appnindo.netlify.app/',
+  },
 ];
 
 function WorkCard({ p }: { p: Project }) {
@@ -255,7 +342,7 @@ export function Work() {
             letterSpacing: '0.08em',
           }}
         >
-          {PROJECTS.length} OF 12 SHOWN
+          {PROJECTS.length} OF {PROJECTS.length} SHOWN
         </div>
       </div>
       <div className="work-list">
