@@ -22,8 +22,9 @@ type Project = {
   title: string;
   blurb: string;
   stack: string[];
-  viz: 'records' | 'chat' | 'graph';
+  viz: 'records' | 'chat' | 'graph' | 'site' | 'shot';
   url?: string;
+  image?: string;
 };
 
 const PROJECTS: Project[] = [
@@ -121,7 +122,7 @@ function WorkCard({ p }: { p: Project }) {
         </div>
       </div>
       <div className="w-viz">
-        <ProjectViz kind={p.viz} />
+        <ProjectViz p={p} />
       </div>
     </article>
   );
@@ -137,7 +138,8 @@ function WorkCard({ p }: { p: Project }) {
   return content;
 }
 
-function ProjectViz({ kind }: { kind: Project['viz'] }) {
+function ProjectViz({ p }: { p: Project }) {
+  const kind = p.viz;
   if (kind === 'records') {
     return (
       <div style={{ position: 'absolute', inset: 0, borderRadius: 'inherit', overflow: 'hidden' }}>
@@ -158,6 +160,29 @@ function ProjectViz({ kind }: { kind: Project['viz'] }) {
           src="/guy.png"
           alt="AI Portfolio Platform"
           style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
+    );
+  }
+  if (kind === 'site') {
+    return (
+      <div style={{ position: 'absolute', inset: 0, borderRadius: 'inherit', overflow: 'hidden', pointerEvents: 'none' }}>
+        <iframe
+          src={p.url}
+          title={p.title}
+          loading="lazy"
+          style={{ width: '125%', height: '125%', border: 0, transform: 'scale(0.8)', transformOrigin: 'top left' }}
+        />
+      </div>
+    );
+  }
+  if (kind === 'shot') {
+    return (
+      <div style={{ position: 'absolute', inset: 0, borderRadius: 'inherit', overflow: 'hidden' }}>
+        <img
+          src={p.image}
+          alt={p.title}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
         />
       </div>
     );
