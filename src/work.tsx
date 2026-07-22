@@ -60,7 +60,8 @@ const PROJECTS: Project[] = [
     blurb:
       'Real-time automated trading bot wired to broker APIs with a predictive strategy module. Backtested, paper-traded, and shipped to a live account.',
     stack: ['C#', '.NET', 'REST APIs', 'WebSockets'],
-    viz: 'graph',
+    viz: 'shot',
+    image: '/projects/automation.png',
   },
   {
     id: 'p-4',
