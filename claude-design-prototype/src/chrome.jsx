@@ -133,7 +133,7 @@ const CMDK_ITEMS = [
   { group: 'Projects', label: 'View — AI Portfolio Platform', kbd: 'GO', action: () => { document.getElementById('p-2').scrollIntoView({ behavior: 'smooth' }); } },
   { group: 'Projects', label: 'View — Trading Automation System', kbd: 'GO', action: () => { document.getElementById('p-3').scrollIntoView({ behavior: 'smooth' }); } },
   { group: 'Social', label: 'GitHub — @jptaycs', kbd: '↗', action: () => { window.open('https://github.com/jptaycs', '_blank'); } },
-  { group: 'Social', label: 'LinkedIn — jerome-patrick-r-tayco', kbd: '↗', action: () => { window.open('https://linkedin.com/in/jerome-patrick-r-tayco-442873264', '_blank'); } },
+  { group: 'Social', label: 'LinkedIn — jerome-patrick-r-tayco', kbd: '↗', action: () => { window.open('https://www.linkedin.com/in/jerome-patrick-tayco-442873264/', '_blank'); } },
 ];
 
 function CommandPalette({ open, onClose }) {

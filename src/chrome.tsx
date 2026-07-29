@@ -273,7 +273,7 @@ const CMDK_ITEMS: CmdkItem[] = [
     kbd: '↗',
     action: () => {
       window.open(
-        'https://linkedin.com/in/jerome-patrick-r-tayco-442873264',
+        'https://www.linkedin.com/in/jerome-patrick-tayco-442873264/',
         '_blank'
       );
     },

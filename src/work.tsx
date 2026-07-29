@@ -700,7 +700,7 @@ export function Contact() {
               GITHUB ↗
             </a>
             <a
-              href="https://linkedin.com/in/jerome-patrick-r-tayco-442873264"
+              href="https://www.linkedin.com/in/jerome-patrick-tayco-442873264/"
               target="_blank"
               rel="noreferrer"
               style={{
@@ -730,7 +730,7 @@ export function Contact() {
               github.com/jptaycs
             </a>
             <a
-              href="https://linkedin.com/in/jerome-patrick-r-tayco-442873264"
+              href="https://www.linkedin.com/in/jerome-patrick-tayco-442873264//"
               target="_blank"
               rel="noreferrer"
             >

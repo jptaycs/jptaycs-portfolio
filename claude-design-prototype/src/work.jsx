@@ -377,7 +377,7 @@ function Contact() {
               {copied ? '✓ COPIED' : 'COPY EMAIL'}
             </button>
             <a href="https://github.com/jptaycs" target="_blank" style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--muted)', textDecoration: 'none', letterSpacing: '0.08em', textTransform: 'uppercase' }}>GITHUB ↗</a>
-            <a href="https://linkedin.com/in/jerome-patrick-r-tayco-442873264" target="_blank" style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--muted)', textDecoration: 'none', letterSpacing: '0.08em', textTransform: 'uppercase' }}>LINKEDIN ↗</a>
+            <a href="https://www.linkedin.com/in/jerome-patrick-tayco-442873264/" target="_blank" style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--muted)', textDecoration: 'none', letterSpacing: '0.08em', textTransform: 'uppercase' }}>LINKEDIN ↗</a>
           </div>
         </div>
 
@@ -391,7 +391,7 @@ function Contact() {
             <span className="head">SOCIAL</span>
             <a href="mailto:jptayco1109@gmail.com">jptayco1109@gmail.com</a>
             <a href="https://github.com/jptaycs" target="_blank">github.com/jptaycs</a>
-            <a href="https://linkedin.com/in/jerome-patrick-r-tayco-442873264" target="_blank">linkedin · jerome-patrick-r-tayco</a>
+            <a href="https://www.linkedin.com/in/jerome-patrick-tayco-442873264/" target="_blank">linkedin · jerome-patrick-r-tayco</a>
           </div>
           <div className="col" style={{ textAlign: 'right' }}>
             <span className="head">SITE</span>

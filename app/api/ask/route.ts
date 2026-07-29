@@ -20,7 +20,7 @@ Selected work:
 - AI Portfolio Platform (2024, Next.js/Framer Motion/Claude API) — interactive portfolio with live AI chat and terminal interface.
 - Trading Automation System (2024, C#/.NET) — real-time automated trading bot with predictive strategy.
 
-Contact: jptayco2002@gmail.com · github.com/jptaycs · linkedin.com/in/jerome-patrick-r-tayco-442873264
+Contact: jptayco2002@gmail.com · github.com/jptaycs · https://www.linkedin.com/in/jerome-patrick-tayco-442873264/
 
 Keep replies short (2-4 sentences), conversational, and confident. No markdown bullets.`;
 
