@@ -38,6 +38,7 @@ const PROJECTS: Project[] = [
       'Offline-first desktop system for local government records — citizen registry, permits, and PDF certificate generation. Built for low-connectivity municipalities.',
     stack: ['Tauri', 'React', 'Go', 'MySQL', 'PDF-gen'],
     viz: 'records',
+    url: 'https://bms-demo-nine.vercel.app/',
   },
   {
     id: 'p-2',
