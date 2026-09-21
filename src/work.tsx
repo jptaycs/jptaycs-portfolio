@@ -24,6 +24,7 @@ type Project = {
   stack: string[];
   viz: 'records' | 'chat' | 'graph' | 'site' | 'shot';
   url?: string;
+  links?: { label: string; href: string }[];
   image?: string;
 };
 
@@ -38,7 +39,10 @@ const PROJECTS: Project[] = [
       'Offline-first desktop system for local government records — citizen registry, permits, and PDF certificate generation. Built for low-connectivity municipalities.',
     stack: ['Tauri', 'React', 'Go', 'MySQL', 'PDF-gen'],
     viz: 'records',
-    url: 'https://bms-demo-nine.vercel.app/',
+    links: [
+      { label: 'Live demo ↗', href: 'https://bms-demo-nine.vercel.app/' },
+      { label: 'YouTube ↗', href: 'https://www.youtube.com/watch?v=UkUzTKExxM8' },
+    ],
   },
   {
     id: 'p-2',
@@ -209,6 +213,15 @@ function WorkCard({ p }: { p: Project }) {
             </span>
           ))}
         </div>
+        {p.links && (
+          <div className="w-links">
+            {p.links.map((l) => (
+              <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">
+                {l.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
       <div className="w-viz">
         <ProjectViz p={p} />
