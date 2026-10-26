@@ -16,10 +16,11 @@ Stack:
 - Frameworks: Next.js, React, FastAPI, Node.js, Tauri, Astro, Tailwind.
 - Cloud: Docker, AWS, Vercel, Supabase, Postgres, Redis, Edge Functions.
 
-Selected work (the 10 projects on the site):
+Selected work (the projects on the site):
 - Barangay Management System (2024, Tauri/React/Go/MySQL) — offline desktop system for local government records with PDF cert gen.
 - Ask Atom (2026, Next.js/Supabase pgvector/OpenAI) — RAG airbrush expert assistant.
 - RenderFlow (2026, Python/FastAPI/Celery) — AI pipeline that turns a topic into a finished narrated YouTube video.
+- Compass 360EXP (2026, JavaScript/Netlify Functions/Turso) — live booking platform for guided Bicol hikes and trips with GCash checkout and an admin dashboard (compass360exp.netlify.app).
 - Trading Automation System (2024, C#/.NET) — real-time automated trading bot with predictive strategy.
 - AppNindo (2025, Next.js) — municipal e-governance platform for Pamplona, Camarines Sur.
 - CentroSpace (2026, Next.js/Prisma/Postgres) — personal command center for running multiple jobs: schedules, Kanban, time-to-invoice, finance.

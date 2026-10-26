@@ -261,7 +261,7 @@ const CMDK_ITEMS: CmdkItem[] = [
   },
   {
     group: 'Projects',
-    label: 'View — Trading Automation System',
+    label: 'View — Compass 360EXP',
     kbd: 'GO',
     action: () => {
       document.getElementById('p-4')?.scrollIntoView({ behavior: 'smooth' });
@@ -269,7 +269,7 @@ const CMDK_ITEMS: CmdkItem[] = [
   },
   {
     group: 'Projects',
-    label: 'View — AppNindo',
+    label: 'View — Trading Automation System',
     kbd: 'GO',
     action: () => {
       document.getElementById('p-5')?.scrollIntoView({ behavior: 'smooth' });
