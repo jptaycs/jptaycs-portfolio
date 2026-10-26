@@ -173,6 +173,19 @@ const PROJECTS: Project[] = [
     image: '/projects/beginnerairbrush.png',
     url: 'https://beginnerairbrush.com/',
   },
+  {
+    id: 'p-12',
+    num: '12',
+    year: '2026',
+    kind: 'WEB · EDITORIAL',
+    title: 'Fashion Belt Trends',
+    blurb:
+      'Editorial fashion blog whose articles are produced by an n8n pipeline and reviewed in an /admin queue before they publish to a static Astro site.',
+    stack: ['Astro', 'n8n', 'Netlify'],
+    viz: 'shot',
+    image: '/projects/fashionbelttrend.png',
+    url: 'https://fashionbelttrend.com/',
+  },
 ];
 
 function WorkCard({ p }: { p: Project }) {

@@ -28,6 +28,7 @@ Selected work (the projects on the site):
 - My Pet for EatWagLove (2026, JavaScript/Supabase) — Tamagotchi-style virtual pet that teaches real pet care.
 - Rentivo (2025, Next.js) — peer-to-peer camera and gear rental marketplace.
 - Airbrush Learn (2026, Astro/n8n) — beginnerairbrush.com, articles produced by an n8n pipeline.
+- Fashion Belt Trends (2026, Astro/n8n) — editorial fashion blog at fashionbelttrend.com, articles produced by an n8n pipeline and reviewed in /admin before publishing.
 
 Contact: jptayco2002@gmail.com · github.com/jptaycs · https://www.linkedin.com/in/jerome-patrick-tayco-442873264/
 
