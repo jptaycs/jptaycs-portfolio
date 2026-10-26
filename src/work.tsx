@@ -68,14 +68,8 @@ const PROJECTS: Project[] = [
     blurb:
       'Topic in, finished narrated YouTube video out — script, scene images, AI host, clickbait thumbnail and render — with per-scene regenerate before the final pass. Now a multi-user SaaS with a Celery job queue.',
     stack: ['Python', 'FastAPI', 'Celery', 'Redis', 'Postgres', 'ffmpeg'],
-    viz: 'term',
-    lines: [
-      '$ renderflow new "The Town That Danced Itself to Death"',
-      '✓ script · scenes · narration',
-      '✓ thumbnail + reaction badge',
-      '⏸ paused for scene review',
-      '→ render.mp4',
-    ],
+    viz: 'shot',
+    image: '/projects/renderflow.jpg',
     links: [{ label: 'GitHub ↗', href: 'https://github.com/jptaycs/RenderFlow' }],
   },
   {
@@ -137,13 +131,8 @@ const PROJECTS: Project[] = [
     blurb:
       'My own command center for running three client jobs at once — schedules with overlap warnings, Kanban projects, time logs that turn into invoices, finance, a credentials vault, and read-only share links for each boss.',
     stack: ['Next.js', 'Prisma', 'Postgres', 'NextAuth', 'Netlify'],
-    viz: 'term',
-    lines: [
-      'TODAY · 3 jobs scheduled',
-      '! overlap warning between two blocks',
-      '✓ tasks due · bills this week',
-      '→ invoice drafted from logged hours',
-    ],
+    viz: 'shot',
+    image: '/projects/centrospace.jpg',
   },
   {
     id: 'p-9',
