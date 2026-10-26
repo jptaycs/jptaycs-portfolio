@@ -11,6 +11,7 @@ import {
   ScrollRail,
 } from './chrome';
 import { Hero } from './hero';
+import { DiveIntro } from './intro';
 import { About, Marquee, TechStack, Timeline } from './sections';
 import { Contact, GitHubSection, Terminal, Work } from './work';
 
@@ -48,6 +49,7 @@ export default function App() {
       <ScrollRail />
 
       <main>
+        <DiveIntro />
         <Hero />
         <Marquee />
         <About />

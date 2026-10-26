@@ -22,10 +22,13 @@ type Project = {
   title: string;
   blurb: string;
   stack: string[];
-  viz: 'records' | 'chat' | 'graph' | 'site' | 'shot';
+  viz: 'records' | 'chat' | 'graph' | 'site' | 'shot' | 'term';
   url?: string;
   links?: { label: string; href: string }[];
   image?: string;
+  // 'term' viz: a few log-style lines standing in for a screenshot of a
+  // private or headless project.
+  lines?: string[];
 };
 
 const PROJECTS: Project[] = [
@@ -154,6 +157,188 @@ const PROJECTS: Project[] = [
     stack: ['Next.js', 'React', 'Admin dashboard', 'REST APIs'],
     viz: 'site',
     url: 'https://appnindo.netlify.app/',
+  },
+  {
+    id: 'p-11',
+    num: '11',
+    year: '2026',
+    kind: 'MOBILE · AI VISION · NOBS BIZ',
+    title: 'AirBrush Arsenal — SprayGunner',
+    blurb:
+      'Cross-platform app for SprayGunner customers — model-specific compatibility lookups, an owned/saved gear locker, product registration, and identifying an airbrush from a single photo.',
+    stack: ['React Native', 'Expo Router', 'TypeScript', 'Image recognition'],
+    viz: 'shot',
+    image: '/projects/airbrush-arsenal.jpg',
+  },
+  {
+    id: 'p-12',
+    num: '12',
+    year: '2026',
+    kind: 'AI · RAG AGENT · NOBS BIZ',
+    title: 'Ask Atom — Airbrush Expert Bot',
+    blurb:
+      "Rebuild of SprayGunner's airbrush expert assistant — a pgvector knowledge base over product manuals and guides, with retrieval-grounded answers instead of guesses.",
+    stack: ['Next.js', 'Supabase', 'pgvector', 'OpenAI'],
+    viz: 'shot',
+    image: '/projects/ask-atom.webp',
+  },
+  {
+    id: 'p-13',
+    num: '13',
+    year: '2026',
+    kind: 'WEB · CONTENT PIPELINE · NOBS BIZ',
+    title: 'Airbrush Learn',
+    blurb:
+      'Static Astro learning hub of tutorials, gear reviews and buying guides. An n8n pipeline writes the articles and commits them to the repo, and every push redeploys the site — no CMS to maintain.',
+    stack: ['Astro', 'n8n', 'Netlify'],
+    viz: 'shot',
+    image: '/projects/beginnerairbrush.png',
+    url: 'https://beginnerairbrush.com/',
+  },
+  {
+    id: 'p-14',
+    num: '14',
+    year: '2026',
+    kind: 'AUTOMATION · E-COMMERCE · NOBS BIZ',
+    title: 'SprayGunner Price Monitor',
+    blurb:
+      'Watches competitor prices for every brand SprayGunner sells and flags when they are being undercut — or are cheapest by too much. Also audits the whole store daily for $0 prices and sudden 3× jumps. It alerts and never changes a price.',
+    stack: ['Node.js', 'SQLite', 'Nodemailer', 'DigitalOcean'],
+    viz: 'term',
+    lines: [
+      '$ monitor run --brands all',
+      '✓ catalog checked against competitors',
+      '! undercut  — competitor below our price',
+      '! mistake   — $0 price / 3× jump',
+      '→ digest emailed to ops',
+    ],
+  },
+  {
+    id: 'p-15',
+    num: '15',
+    year: '2026',
+    kind: 'WEB · AFFILIATE · RAILWAY MEDIA',
+    title: 'Reliable Product Ratings',
+    blurb:
+      'Homepage, legal and contact pages for an affiliate review brand — Next.js exported to static files and served by plain nginx on a droplet, so production needs no Node server.',
+    stack: ['Next.js', 'Static export', 'nginx'],
+    viz: 'shot',
+    image: '/projects/reliableproductratings.png',
+    url: 'https://reliableproductratings.com/',
+  },
+  {
+    id: 'p-16',
+    num: '16',
+    year: '2026',
+    kind: 'AUTOMATION · ADTECH · RAILWAY MEDIA',
+    title: 'Google Ads Campaign Builder',
+    blurb:
+      'Internal tool for the search-ads team: clones a template Search campaign into a new, paused campaign from pasted keywords, headlines, descriptions and sitelinks — hours of manual setup down to one form.',
+    stack: ['Python', 'FastAPI', 'Google Ads API', 'Docker'],
+    viz: 'term',
+    lines: [
+      '$ clone --template "Search · Master"',
+      '✓ keywords · headlines · descriptions',
+      '✓ sitelinks attached',
+      '→ campaign created  status=PAUSED',
+    ],
+  },
+  {
+    id: 'p-17',
+    num: '17',
+    year: '2026',
+    kind: 'WEB · GAMIFIED · EATWAGLOVE',
+    title: 'My Pet — EatWagLove',
+    blurb:
+      'Tamagotchi-style virtual pet that teaches real pet care — adopt one of 30 dog and cat breeds, care for it daily, earn coins and rewards, and discover EatWagLove articles and videos along the way.',
+    stack: ['JavaScript', 'Supabase', 'Vercel'],
+    viz: 'shot',
+    image: '/projects/ewl-pet.png',
+    url: 'https://my-pet-app-two.vercel.app/',
+  },
+  {
+    id: 'p-18',
+    num: '18',
+    year: '2026',
+    kind: 'WEB · EDITORIAL',
+    title: 'Fashion Belt Trends',
+    blurb:
+      'Editorial fashion blog whose articles are produced by an n8n pipeline and reviewed in an /admin queue before they publish to a static Astro site.',
+    stack: ['Astro', 'n8n', 'Netlify'],
+    viz: 'shot',
+    image: '/projects/fashionbelttrend.png',
+    url: 'https://fashionbelttrend.com/',
+  },
+  {
+    id: 'p-19',
+    num: '19',
+    year: '2026',
+    kind: 'AI · VIDEO PIPELINE',
+    title: 'RenderFlow — AI Video Studio',
+    blurb:
+      'Topic in, finished narrated YouTube video out — script, scene images, AI host, clickbait thumbnail and render — with per-scene regenerate before the final pass. Now a multi-user SaaS with a Celery job queue.',
+    stack: ['Python', 'FastAPI', 'Celery', 'Redis', 'Postgres', 'ffmpeg'],
+    viz: 'term',
+    lines: [
+      '$ renderflow new "The Town That Danced Itself to Death"',
+      '✓ script · scenes · narration',
+      '✓ thumbnail + reaction badge',
+      '⏸ paused for scene review',
+      '→ render.mp4',
+    ],
+    links: [{ label: 'GitHub ↗', href: 'https://github.com/jptaycs/RenderFlow' }],
+  },
+  {
+    id: 'p-20',
+    num: '20',
+    year: '2026',
+    kind: 'MOBILE · AI TRAVEL',
+    title: 'TripWise',
+    blurb:
+      'Offline-capable trip planner — AI itineraries with real places, a live pacing timer, rule-based and AI re-planning when the day slips, offline maps and shared trips.',
+    stack: ['Expo', 'React Native', 'Mapbox', 'Fastify'],
+    viz: 'term',
+    lines: [
+      '09:00  Intramuros walking tour     ✓',
+      '11:30  Binondo food crawl          ● running 25m late',
+      '→ re-plan: drop museum, keep sunset',
+      '17:45  Manila Bay sunset',
+    ],
+  },
+  {
+    id: 'p-21',
+    num: '21',
+    year: '2026',
+    kind: 'WEB · PWA · B2B',
+    title: 'SariHub',
+    blurb:
+      'B2B ordering PWA for sari-sari store owners in Lucena, Quezon — wet-market goods and cooking essentials ordered the night before and delivered by a 6 AM truck.',
+    stack: ['Next.js', 'tRPC', 'Drizzle', 'Supabase', 'Mapbox'],
+    viz: 'term',
+    lines: [
+      '21:40  order placed  · store A',
+      '22:05  order placed  · store B',
+      '→ cutoff · route built',
+      '06:00  truck out',
+    ],
+    links: [{ label: 'GitHub ↗', href: 'https://github.com/jptaycs/sarihub' }],
+  },
+  {
+    id: 'p-22',
+    num: '22',
+    year: '2026',
+    kind: 'WEB · PRODUCTIVITY',
+    title: 'CentroSpace',
+    blurb:
+      'My own command center for running three client jobs at once — schedules with overlap warnings, Kanban projects, time logs that turn into invoices, finance, a credentials vault, and read-only share links for each boss.',
+    stack: ['Next.js', 'Prisma', 'Postgres', 'NextAuth', 'Netlify'],
+    viz: 'term',
+    lines: [
+      'TODAY · 3 jobs scheduled',
+      '! overlap warning between two blocks',
+      '✓ tasks due · bills this week',
+      '→ invoice drafted from logged hours',
+    ],
   },
 ];
 
@@ -287,6 +472,47 @@ function ProjectViz({ p }: { p: Project }) {
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
         />
       </div>
+    );
+  }
+  if (kind === 'term') {
+    return (
+      <Fragment>
+        <div className="viz-grid" />
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            padding: 22,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            gap: 8,
+            fontFamily: 'var(--font-mono)',
+            fontSize: 12,
+            lineHeight: 1.4,
+          }}
+        >
+          {p.lines?.map((line, i) => (
+            <div
+              key={i}
+              style={{
+                color: line.startsWith('!')
+                  ? 'var(--amber)'
+                  : line.startsWith('→')
+                    ? 'var(--cyan)'
+                    : i === 0
+                      ? 'var(--text)'
+                      : 'var(--muted)',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+              }}
+            >
+              {line}
+            </div>
+          ))}
+        </div>
+      </Fragment>
     );
   }
   return (
@@ -684,8 +910,8 @@ export function Contact() {
               {copied ? '✓ COPIED' : 'COPY EMAIL'}
             </button>
             <a
-              href="/Updated-CV-Tayco.pdf"
-              download="Updated-CV-Tayco.pdf"
+              href="/TAYCO_2026_RESUME.pdf"
+              download="TAYCO_2026_RESUME.pdf"
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: 12,

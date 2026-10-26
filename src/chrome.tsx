@@ -97,7 +97,7 @@ export function Header({ onOpenCmdk, theme, onToggleTheme }: HeaderProps) {
         <a href="#stack">STACK</a>
         <a href="#timeline">PATH</a>
         <a href="#contact">CONTACT</a>
-        <a href="/Updated-CV-Tayco.pdf" download="Updated-CV-Tayco.pdf" data-cursor="DOWNLOAD">
+        <a href="/TAYCO_2026_RESUME.pdf" download="TAYCO_2026_RESUME.pdf" data-cursor="DOWNLOAD">
           CV ↓
         </a>
         <button className="kbd-cta" onClick={onOpenCmdk} data-cursor="OPEN">
@@ -222,8 +222,8 @@ const CMDK_ITEMS: CmdkItem[] = [
     kbd: '⌘D',
     action: () => {
       const link = document.createElement('a');
-      link.href = '/Updated-CV-Tayco.pdf';
-      link.download = 'Updated-CV-Tayco.pdf';
+      link.href = '/TAYCO_2026_RESUME.pdf';
+      link.download = 'TAYCO_2026_RESUME.pdf';
       link.click();
     },
   },

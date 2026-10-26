@@ -343,6 +343,27 @@ export function TechStack() {
 
 const TL = [
   {
+    year: '2026 — PRESENT',
+    title: 'Developer · Search Ads Team',
+    org: 'Railway Media',
+    body: 'Building tooling for a paid-search affiliate team — a Google Ads campaign builder, a self-serve listicle CMS, and affiliate landing pages like Reliable Product Ratings.',
+    tags: ['Google Ads API', 'Next.js', 'Landing Pages', 'Part-time'],
+  },
+  {
+    year: '2026 — PRESENT',
+    title: 'Developer & AI Automation Specialist',
+    org: 'NOBS BIZ LLC · SprayGunner',
+    body: 'Engineering for an airbrush e-commerce brand — the AirBrush Arsenal mobile app, the Ask Atom RAG assistant, a competitor price monitor, the Airbrush Learn content site, and a Reddit-to-Discord lead bot.',
+    tags: ['React Native', 'RAG', 'Automation', 'Part-time'],
+  },
+  {
+    year: '2026 — PRESENT',
+    title: 'Developer & AI Automation Specialist',
+    org: 'Toivelo',
+    body: 'Building and maintaining AI content tooling — a Claude API script generator that runs queued titles unattended, plus internal time-tracking and invoicing.',
+    tags: ['Claude API', 'Python', 'Automation', 'Part-time'],
+  },
+  {
     year: '2024 — PRESENT',
     title: 'Founder · AI / Full-Stack Engineer',
     org: 'Appnado IT Solutions',
@@ -388,6 +409,17 @@ export function Timeline() {
     const wrap = wrapRef.current;
     const strip = stripRef.current;
     if (!wrap || !strip) return;
+    // The strip eases toward the scroll target instead of jumping a full
+    // wheel notch at a time.
+    let target = 0;
+    let current = 0;
+    let raf = 0;
+    const animate = () => {
+      current += (target - current) * 0.14;
+      if (Math.abs(target - current) < 0.5) current = target;
+      strip.style.transform = `translate3d(${current}px, 0, 0)`;
+      raf = current === target ? 0 : requestAnimationFrame(animate);
+    };
     const onScroll = () => {
       const r = wrap.getBoundingClientRect();
       const total = r.height - window.innerHeight;
@@ -398,14 +430,31 @@ export function Timeline() {
       if (!parent) return;
       const viewW = parent.clientWidth;
       const maxX = stripW - viewW;
-      strip.style.transform = `translate3d(${-p * maxX}px, 0, 0)`;
+      target = -p * maxX;
+      if (!raf) raf = requestAnimationFrame(animate);
+    };
+    // A sideways trackpad swipe over the pinned strip scrolls the page, so
+    // "left to right" moves the timeline too.
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      const r = wrap.getBoundingClientRect();
+      const pinned = r.top <= 0 && r.bottom >= window.innerHeight;
+      if (!pinned) return;
+      const total = r.height - window.innerHeight;
+      const p = -r.top / total;
+      if ((e.deltaX < 0 && p <= 0) || (e.deltaX > 0 && p >= 1)) return;
+      e.preventDefault();
+      window.scrollBy(0, e.deltaX);
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
+    wrap.addEventListener('wheel', onWheel, { passive: false });
     return () => {
+      cancelAnimationFrame(raf);
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
+      wrap.removeEventListener('wheel', onWheel);
     };
   }, []);
 
