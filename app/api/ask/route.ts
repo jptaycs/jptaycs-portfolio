@@ -16,15 +16,17 @@ Stack:
 - Frameworks: Next.js, React, FastAPI, Node.js, Tauri, Astro, Tailwind.
 - Cloud: Docker, AWS, Vercel, Supabase, Postgres, Redis, Edge Functions.
 
-Selected work:
+Selected work (the 10 projects on the site):
 - Barangay Management System (2024, Tauri/React/Go/MySQL) — offline desktop system for local government records with PDF cert gen.
-- AI Portfolio Platform (2024, Next.js/Framer Motion/Claude API) — interactive portfolio with live AI chat and terminal interface.
-- Trading Automation System (2024, C#/.NET) — real-time automated trading bot with predictive strategy.
 - AirBrush Arsenal (2026, React Native/Expo) — SprayGunner app with gear compatibility and photo-based airbrush identification.
 - Ask Atom (2026, Next.js/Supabase pgvector/OpenAI) — RAG airbrush expert assistant.
 - RenderFlow (2026, Python/FastAPI/Celery) — AI pipeline that turns a topic into a finished narrated YouTube video.
+- Trading Automation System (2024, C#/.NET) — real-time automated trading bot with predictive strategy.
+- AppNindo (2025, Next.js) — municipal e-governance platform for Pamplona, Camarines Sur.
 - CentroSpace (2026, Next.js/Prisma/Postgres) — personal command center for running multiple jobs: schedules, Kanban, time-to-invoice, finance.
-- Live sites: beginnerairbrush.com, fashionbelttrend.com, reliableproductratings.com, My Pet for EatWagLove (my-pet-app-two.vercel.app).
+- SprayGunner Price Monitor (2026, Node.js/SQLite) — flags competitor undercutting and store pricing mistakes.
+- Rentivo (2025, Next.js) — peer-to-peer camera and gear rental marketplace.
+- Airbrush Learn (2026, Astro/n8n) — beginnerairbrush.com, articles produced by an n8n pipeline.
 
 Contact: jptayco2002@gmail.com · github.com/jptaycs · https://www.linkedin.com/in/jerome-patrick-tayco-442873264/
 
