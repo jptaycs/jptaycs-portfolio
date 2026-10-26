@@ -245,7 +245,7 @@ const CMDK_ITEMS: CmdkItem[] = [
   },
   {
     group: 'Projects',
-    label: 'View — AirBrush Arsenal',
+    label: 'View — Ask Atom',
     kbd: 'GO',
     action: () => {
       document.getElementById('p-2')?.scrollIntoView({ behavior: 'smooth' });
@@ -253,7 +253,7 @@ const CMDK_ITEMS: CmdkItem[] = [
   },
   {
     group: 'Projects',
-    label: 'View — Ask Atom',
+    label: 'View — RenderFlow',
     kbd: 'GO',
     action: () => {
       document.getElementById('p-3')?.scrollIntoView({ behavior: 'smooth' });
@@ -261,7 +261,7 @@ const CMDK_ITEMS: CmdkItem[] = [
   },
   {
     group: 'Projects',
-    label: 'View — RenderFlow',
+    label: 'View — Trading Automation System',
     kbd: 'GO',
     action: () => {
       document.getElementById('p-4')?.scrollIntoView({ behavior: 'smooth' });
@@ -269,7 +269,7 @@ const CMDK_ITEMS: CmdkItem[] = [
   },
   {
     group: 'Projects',
-    label: 'View — Trading Automation System',
+    label: 'View — AppNindo',
     kbd: 'GO',
     action: () => {
       document.getElementById('p-5')?.scrollIntoView({ behavior: 'smooth' });

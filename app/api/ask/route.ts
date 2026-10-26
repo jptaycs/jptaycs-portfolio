@@ -5,7 +5,7 @@ const ASK_CONTEXT = `You are answering as JP Tayco's portfolio assistant. Speak 
 About JP:
 - AI Engineer & Software Developer based in the Philippines, building for the world.
 - BS Computer Science, Ateneo de Naga University (2021-2025).
-- Current work (2026-present): full-time Developer & AI Automation Specialist at NOBS BIZ LLC / SprayGunner (AirBrush Arsenal mobile app, Ask Atom RAG assistant, price monitor, Airbrush Learn site). Part-time: Developer on the Search Ads team at Railway Media (Google Ads campaign builder, listicle CMS, affiliate landing pages) and Developer & AI Automation Specialist at Toivelo (Claude API script generator, internal tooling).
+- Current work (2026-present): full-time Developer & AI Automation Specialist at NOBS BIZ LLC / SprayGunner (Ask Atom RAG assistant, Airbrush Learn site and n8n content pipeline, Reddit-to-Discord bot). Part-time: Developer on the Search Ads team at Railway Media (Google Ads campaign builder, listicle CMS, affiliate landing pages) and Developer & AI Automation Specialist at Toivelo (Claude API script generator, internal tooling).
 - Founder & AI/Full-Stack Engineer at Appnado IT Solutions (2024-present). Builds AI-powered products end-to-end.
 - 2022-2024 freelance on Upwork — international clients, web apps, automation, C# trading bot.
 - May-Jul 2024 software dev intern at ICTC, Ateneo de Naga.
@@ -18,13 +18,13 @@ Stack:
 
 Selected work (the 10 projects on the site):
 - Barangay Management System (2024, Tauri/React/Go/MySQL) — offline desktop system for local government records with PDF cert gen.
-- AirBrush Arsenal (2026, React Native/Expo) — SprayGunner app with gear compatibility and photo-based airbrush identification.
 - Ask Atom (2026, Next.js/Supabase pgvector/OpenAI) — RAG airbrush expert assistant.
 - RenderFlow (2026, Python/FastAPI/Celery) — AI pipeline that turns a topic into a finished narrated YouTube video.
 - Trading Automation System (2024, C#/.NET) — real-time automated trading bot with predictive strategy.
 - AppNindo (2025, Next.js) — municipal e-governance platform for Pamplona, Camarines Sur.
 - CentroSpace (2026, Next.js/Prisma/Postgres) — personal command center for running multiple jobs: schedules, Kanban, time-to-invoice, finance.
-- SprayGunner Price Monitor (2026, Node.js/SQLite) — flags competitor undercutting and store pricing mistakes.
+- Appnado IT Solutions Platform (2025, Next.js) — company platform digitizing barangay records, inventory and retail POS for LGUs and SMEs.
+- My Pet for EatWagLove (2026, JavaScript/Supabase) — Tamagotchi-style virtual pet that teaches real pet care.
 - Rentivo (2025, Next.js) — peer-to-peer camera and gear rental marketplace.
 - Airbrush Learn (2026, Astro/n8n) — beginnerairbrush.com, articles produced by an n8n pipeline.
 

@@ -353,8 +353,8 @@ const TL = [
     year: '2026 — PRESENT',
     title: 'Developer & AI Automation Specialist',
     org: 'NOBS BIZ LLC · SprayGunner',
-    body: 'Engineering for an airbrush e-commerce brand — the AirBrush Arsenal mobile app, the Ask Atom RAG assistant, a competitor price monitor, the Airbrush Learn content site, and a Reddit-to-Discord lead bot.',
-    tags: ['React Native', 'RAG', 'Automation', 'Full-time'],
+    body: 'AI and automation for an airbrush e-commerce brand — the Ask Atom RAG assistant, the Airbrush Learn content site and its n8n pipeline, and a Reddit-to-Discord lead bot.',
+    tags: ['RAG', 'n8n', 'Automation', 'Full-time'],
   },
   {
     year: '2026 — PRESENT',
